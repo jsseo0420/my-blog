@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>아이펠에서 Git과 GitHub를 처음 배운 날 · my-blog</title>
+  <meta name="description" content="모두의연구소 아이펠 수업에서 Git과 GitHub를 배운 날의 기록">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="site-title" href="../">my-blog</a>
+      <nav class="site-nav">
+        <a href="https://github.com/jsseo0420/my-blog">GitHub</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <article class="post">
+      <header class="post-header">
+        <div class="meta">2026년 10월 23일 · 아이펠 수업 기록</div>
+        <h1>아이펠에서 Git과 GitHub를 처음 배운 날</h1>
+        <div class="tags"><span class="tag">아이펠</span><span class="tag">Git</span><span class="tag">GitHub</span></div>
+      </header>
+
+      <div class="post-body">
+        <p>오늘 모두의연구소 아이펠 수업에서 <strong>Git과 GitHub</strong>를 배웠다. 솔직히 이름만 들어봤지 제대로 써본 적은 없었는데, 막상 해보니 생각보다 훨씬 재미있었다.</p>
+
+        <blockquote>
+          <p>오늘 수업, 정말 재미있었다! 배운 걸 바로 써먹어서 이 블로그까지 만들었다.</p>
+        </blockquote>
+
+        <h2>Git과 GitHub는 뭐가 다를까</h2>
+        <p>처음에는 둘이 같은 건 줄 알았는데, 역할이 달랐다.</p>
+        <table>
+          <thead>
+            <tr><th>Git</th><th>GitHub</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>내 컴퓨터에서 파일의 변경 이력을 관리하는 도구</td>
+              <td>Git 저장소를 인터넷에 올려두고 공유하는 서비스</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>Git으로 내 작업을 차곡차곡 저장(커밋)하고, GitHub에 올려서(푸시) 어디서든 보고 다른 사람과 함께 쓸 수 있게 하는 구조다.</p>
+
+        <h2>오늘 직접 해본 것</h2>
+        <p>빈 폴더 하나에서 시작해서 GitHub 저장소와 연결하고 첫 커밋을 올렸다.</p>
+<pre><code># 1. 폴더를 Git 저장소로 만들기
+git init -b main
+
+# 2. GitHub 저장소와 연결하기
+git remote add origin https://github.com/jsseo0420/my-blog.git
+
+# 3. 누가 커밋했는지 알려주기
+git config --global user.name "jsseo0420"
+git config --global user.email "..."
+
+# 4. 파일을 담고, 저장하고, 올리기
+git add README.md
+git commit -m "Initial commit"
+git push -u origin main</code></pre>
+
+        <p>명령어마다 하는 일을 정리해보면 이렇다.</p>
+        <ul>
+          <li><code>git init</code>: 이 폴더의 변경 이력을 Git이 관리하기 시작한다.</li>
+          <li><code>git remote add</code>: 내 폴더와 GitHub 저장소를 이어준다.</li>
+          <li><code>git add</code>: 저장할 파일을 고른다.</li>
+          <li><code>git commit</code>: 고른 파일을 하나의 기록으로 남긴다.</li>
+          <li><code>git push</code>: 남긴 기록을 GitHub로 보낸다.</li>
+        </ul>
+
+        <h2>작은 실수에서 배운 것</h2>
+        <p><code>git config --global user.name "이름"</code>을 예시 그대로 입력하는 바람에 내 이름이 진짜로 "이름"이 될 뻔했다. 😅 커밋에는 작성자가 함께 기록되니까, 처음에 이름과 이메일을 제대로 설정해 두는 게 중요하다는 걸 알게 됐다.</p>
+
+        <h2>그리고 이 블로그</h2>
+        <p>지금 보고 있는 이 블로그도 오늘 만든 GitHub 저장소에 올라가 있고, <strong>GitHub Pages</strong>로 배포했다. 저장소에 푸시하면 그게 바로 웹사이트가 된다는 게 신기했다. 앞으로 아이펠에서 배우는 내용을 여기에 하나씩 기록해 나가야겠다.</p>
+      </div>
+    </article>
+
+    <a class="back" href="../">← 글 목록으로</a>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">© 2026 jsseo0420 · GitHub Pages로 배포</div>
+  </footer>
+</body>
+</html>
