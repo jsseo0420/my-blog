@@ -144,6 +144,7 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
 .post {
   padding: 56px 0 40px;
 }
+.post-header { margin-bottom: 32px; }
 .post-header h1 {
   font-size: 32px;
   line-height: 1.4;
